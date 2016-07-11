@@ -1,0 +1,8 @@
+language: node_js
+sudo: true
+before_script:
+    - sudo apt-get purge python-openssl
+    - sudo pip install pyopenssl ndg-httpsclient pyasn1
+    - pip install pep8
+script:
+    - make all
